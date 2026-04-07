@@ -33,33 +33,47 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* RIGHT IMAGE */}
+        {/* RIGHT SIDE */}
         <div className="flex justify-center md:justify-end w-full">
-          <motion.div
-            initial={{ scale: 0.8, opacity: 0 }}
-            animate={{
-              scale: 1,
-              opacity: 1,
-              y: [0, -20, 0],
-            }}
-            transition={{
-              scale: { duration: 0.8, ease: "easeOut" },
-              opacity: { duration: 0.8 },
-              y: {
-                duration: 3,
-                repeat: Infinity,
-                ease: "easeInOut",
-              },
-            }}
-            whileHover={{ scale: 1.1 }}
-            className="drop-shadow-xl flex justify-end w-full"
-          >
-            <img
-              src={home}
-              alt="hero"
-              className="w-[350px] md:w-[450px] object-contain rounded-3xl border-2 ml-auto"
-            />
-          </motion.div>
+          <div className="relative">
+            {/* IMAGE */}
+            <motion.div
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{
+                scale: 1,
+                opacity: 1,
+                y: [0, -20, 0],
+                rotate: [0, 2, -2, 0],
+              }}
+              transition={{
+                scale: { duration: 0.8, ease: "easeOut" },
+                opacity: { duration: 0.8 },
+                y: {
+                  duration: 3,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                },
+                rotate: {
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                },
+              }}
+              className="drop-shadow-xl"
+            >
+              <img
+                src={home}
+                alt="hero"
+                className="w-[350px] md:w-[450px] object-contain rounded-3xl border-2"
+              />
+            </motion.div>
+
+            {/* FLOATING CARD (OUTSIDE LIKE DESIGN) */}
+            <div className="absolute -top-6 -right-6 md:-top-8 md:-right-8 bg-white rounded-2xl shadow-xl px-6 py-4 z-10">
+              <p className="text-black font-bold text-xl">+142%</p>
+              <p className="text-gray-500 text-sm">Monthly ROI</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
