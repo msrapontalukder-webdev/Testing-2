@@ -4,7 +4,7 @@ import home from "../assets/hero (2).png";
 
 const Home = () => {
   return (
-    <section className="w-full min-h-[90vh] flex items-center px-4 sm:px-6 md:px-12 lg:px-16 bg-gray-50">
+    <section className="w-full min-h-[90vh] flex items-center px-4 sm:px-6 md:px-12 lg:px-16 bg-gray-50 overflow-hidden">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center w-full">
         {/* LEFT CONTENT */}
         <div className="text-center md:text-left">
@@ -56,14 +56,28 @@ const Home = () => {
               <img
                 src={home}
                 alt="hero"
-                className="w-[260px] sm:w-[320px] md:w-[400px] lg:w-[450px] object-contain rounded-3xl border-2"
+                className="w-[240px] sm:w-[300px] md:w-[380px] lg:w-[450px] object-contain rounded-3xl border-2"
               />
             </motion.div>
 
-            {/* FLOATING CARD */}
-            <div className="absolute top-2 right-2 sm:-top-4 sm:-right-4 md:-top-6 md:-right-6 bg-white rounded-2xl shadow-xl px-4 py-3 sm:px-5 sm:py-4 z-10">
-              <p className="text-black font-bold text-lg sm:text-xl">+142%</p>
-              <p className="text-gray-500 text-xs sm:text-sm">Monthly ROI</p>
+            {/* FLOATING CARD (FIXED) */}
+            <div
+              className="
+              absolute 
+              top-0 right-0
+              translate-x-1/4 -translate-y-1/4
+              sm:translate-x-1/3 sm:-translate-y-1/3
+              md:translate-x-1/2 md:-translate-y-1/2
+              bg-white rounded-2xl shadow-xl 
+              px-3 py-2 sm:px-5 sm:py-4 z-10
+            "
+            >
+              <p className="text-black font-bold text-base sm:text-xl md:text-2xl">
+                +142%
+              </p>
+              <p className="text-gray-500 text-[10px] sm:text-sm">
+                Monthly ROI
+              </p>
             </div>
           </div>
         </div>
