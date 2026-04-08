@@ -1,4 +1,8 @@
 import "./App.css";
+import "./index.css";
+
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 import Navbar from "./Components/Navbar";
 import Home from "./Components/Home";
 import Service from "./Components/Service";
@@ -6,29 +10,37 @@ import Tesmonials from "./Components/Tesmonials";
 import ContactSection from "./Components/ContractSection";
 import Footer from "./Components/Footer";
 
-function App() {
+function MainPage() {
   return (
-    <div>
+    <>
       <Navbar />
 
-      <section id="home">
+      <div id="home">
         <Home />
-      </section>
+      </div>
 
-      <section id="service">
+      <div id="service">
         <Service />
-      </section>
+      </div>
 
-      <section id="tesmonials">
+      <div id="testimonials">
         <Tesmonials />
-      </section>
+      </div>
 
-      <section id="contact">
+      <div id="contact">
         <ContactSection />
-      </section>
+      </div>
 
       <Footer />
-    </div>
+    </>
+  );
+}
+
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<MainPage />} />
+    </Routes>
   );
 }
 
