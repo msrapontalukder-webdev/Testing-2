@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="bg-white mt-20 border-t">
+    <footer className="bg-white mt-20 ">
       {/* Top Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-12">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
@@ -90,7 +90,7 @@ const Footer = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t">
+      <div className="">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-gray-500">
           <p className="text-center sm:text-left">
             © {new Date().getFullYear()} Authority Ledger. All rights reserved.

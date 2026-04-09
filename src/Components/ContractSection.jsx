@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-
+import msg from "../assets/message.svg";
+import location from "../assets/locarion.svg";
 const ContactSection = () => {
   // Variants
   const container = {
@@ -52,14 +53,14 @@ const ContactSection = () => {
           <div className="mt-6 space-y-4 text-sm text-gray-600">
             <div className="flex items-center gap-3">
               <div className="w-8 h-8 flex items-center justify-center bg-blue-50 rounded-md">
-                📧
+                <img src={msg} alt="msg" />
               </div>
               <span className="font-semibold">hello@authorityledger.com</span>
             </div>
 
             <div className="flex items-center gap-3">
               <div className="w-8 h-8 flex items-center justify-center bg-blue-50 rounded-md">
-                📍
+                <img src={location} alt="location" />
               </div>
               <span className="font-semibold">
                 Financial District, New York
