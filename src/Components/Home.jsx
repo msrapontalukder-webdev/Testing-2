@@ -4,7 +4,7 @@ import home from "../assets/hero (2).png";
 
 const Home = () => {
   return (
-    <section className="w-full min-h-[90vh] flex items-center px-4 sm:px-6 md:px-12 lg:px-16 bg-gray-50 overflow-hidden">
+    <section className="w-full min-h-[90vh] flex items-center px-4 sm:px-6 md:px-12 lg:px-16 bg-gray-50">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center w-full">
         {/* LEFT CONTENT */}
         <div className="text-center md:text-left">
@@ -56,28 +56,34 @@ const Home = () => {
               <img
                 src={home}
                 alt="hero"
-                className="w-[240px] sm:w-[300px] md:w-[380px] lg:w-[450px] object-contain rounded-3xl border-2"
+                className="
+                 w-[230px] sm:w-[280px] md:w-[340px] lg:w-[400px]
+    h-[300px] sm:h-[360px] md:h-[420px] lg:h-[480px]
+    object-cover rounded-3xl border-2
+                "
               />
             </motion.div>
 
-            {/* FLOATING CARD (FIXED) */}
+            {/* FLOATING CARD */}
             <div
               className="
-              absolute 
-              top-0 right-0
-              translate-x-1/4 -translate-y-1/4
-              sm:translate-x-1/3 sm:-translate-y-1/3
-              md:translate-x-1/2 md:-translate-y-1/2
-              bg-white rounded-2xl shadow-xl 
-              px-3 py-2 sm:px-5 sm:py-4 z-10
-            "
+                absolute 
+                -top-4 sm:-top-6 md:-top-8
+                right-0
+
+                translate-x-[4%] -translate-y-[6%]
+                sm:translate-x-[6%] sm:-translate-y-[8%]
+                md:translate-x-[8%] md:-translate-y-[10%]
+
+                bg-white/90 backdrop-blur-md border border-gray-100
+                rounded-2xl shadow-xl 
+                px-4 py-3 sm:px-6 sm:py-4 z-10
+              "
             >
-              <p className="text-black font-bold text-base sm:text-xl md:text-2xl">
+              <p className="text-black font-bold text-lg sm:text-xl md:text-2xl">
                 +142%
               </p>
-              <p className="text-gray-500 text-[10px] sm:text-sm">
-                Monthly ROI
-              </p>
+              <p className="text-gray-500 text-xs sm:text-sm">Monthly ROI</p>
             </div>
           </div>
         </div>
