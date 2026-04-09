@@ -1,5 +1,7 @@
 import React from "react";
-
+import glass from "../assets/glass.svg";
+import container from "../assets/Container.svg";
+import icon from "../assets/icon.svg";
 const Service = () => {
   return (
     <section className="w-full py-16 px-8 md:px-16 bg-gray-50">
@@ -22,7 +24,7 @@ const Service = () => {
             <span className="absolute left-0 top-0 h-full w-1 bg-blue-500 scale-y-0 origin-top transition-transform duration-300 group-hover:scale-y-100 rounded-l-xl"></span>
 
             <div className="w-10 h-10 flex items-center justify-center bg-blue-100 text-blue-600 rounded-md mb-4">
-              🔍
+              <img src={glass} alt="glass" />
             </div>
 
             <h3 className="text-lg font-semibold mb-2">Precision SEO</h3>
@@ -42,7 +44,7 @@ const Service = () => {
             <span className="absolute left-0 top-0 h-full w-1 bg-blue-500 scale-y-0 origin-top transition-transform duration-300 group-hover:scale-y-100 rounded-l-xl"></span>
 
             <div className="w-10 h-10 flex items-center justify-center bg-blue-100 text-blue-600 rounded-md mb-4">
-              ✏️
+              <img src={container} alt="container" />
             </div>
 
             <h3 className="text-lg font-semibold mb-2">Content Power</h3>
@@ -62,7 +64,7 @@ const Service = () => {
             <span className="absolute left-0 top-0 h-full w-1 bg-blue-500 scale-y-0 origin-top transition-transform duration-300 group-hover:scale-y-100 rounded-l-xl"></span>
 
             <div className="w-10 h-10 flex items-center justify-center bg-blue-100 text-blue-600 rounded-md mb-4">
-              📊
+              <img src={icon} alt="icon" />
             </div>
 
             <h3 className="text-lg font-semibold mb-2">Performance PPC</h3>

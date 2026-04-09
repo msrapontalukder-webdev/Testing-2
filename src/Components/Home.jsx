@@ -59,7 +59,7 @@ const Home = () => {
                 className="
                  w-[230px] sm:w-[280px] md:w-[340px] lg:w-[400px]
     h-[300px] sm:h-[360px] md:h-[420px] lg:h-[480px]
-    object-cover rounded-3xl border-2
+    object-cover rounded-xl 
                 "
               />
             </motion.div>
